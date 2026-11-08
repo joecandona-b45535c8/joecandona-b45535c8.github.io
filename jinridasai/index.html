@@ -1,0 +1,1374 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日大赛-赛事看点_赛程安排_热门项目对比</title>
+  <meta name="description" content="今日大赛聚合每日赛事看点、赛程安排与热门项目对比，适合关注竞技赛事、需要快速了解今日大赛内容、赛程与项目选择的用户。">
+  <meta name="keywords" content="赛事看点,赛程安排,热门项目,竞技赛事,比赛日程">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M18 40l10-16 8 12 6-8 8 12' stroke='%23f5c542' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='48' cy='18' r='6' fill='%23f5c542'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --ink: #1a2233;
+      --ink-soft: #4a5568;
+      --ink-muted: #718096;
+      --paper: #f6f7fa;
+      --panel: #ffffff;
+      --line: #e2e6ee;
+      --line-strong: #cbd2e0;
+      --brand: #1b2a4a;
+      --brand-2: #2d4a7a;
+      --accent: #d97706;
+      --accent-soft: #fef3c7;
+      --accent-line: #f5c542;
+      --green: #0f766e;
+      --green-soft: #ccfbf1;
+      --red: #b91c1c;
+      --red-soft: #fee2e2;
+      --blue-soft: #e0e7ff;
+      --shadow: 0 1px 2px rgba(26, 34, 51, .04), 0 6px 18px rgba(26, 34, 51, .06);
+      --radius: 10px;
+      --radius-sm: 6px;
+      --header-h: 64px;
+      --notice-h: 36px;
+      --maxw: 1360px;
+      --gap: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--brand-2); }
+    h1, h2, h3, h4 { margin: 0; line-height: 1.3; font-weight: 700; }
+    h1 { font-size: 2rem; letter-spacing: -.02em; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.05rem; }
+    p { margin: 0 0 .8em; }
+    ul, ol { margin: 0 0 .8em; padding-left: 1.25em; }
+    li { margin-bottom: .35em; }
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; }
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 18px; }
+
+    /* 吸顶公告条 + 页头 */
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--panel);
+      box-shadow: 0 1px 0 var(--line);
+    }
+    .notice {
+      background: linear-gradient(90deg, #1b2a4a, #2d4a7a 60%, #334e7d);
+      color: #f8fafc;
+      font-size: .82rem;
+      height: var(--notice-h);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .notice .wrap { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .notice-badge {
+      background: var(--accent-line);
+      color: #1b2a4a;
+      font-weight: 700;
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-size: .72rem;
+      flex: none;
+    }
+    .notice-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      opacity: .95;
+    }
+    .notice-text strong { color: #fde68a; font-weight: 700; }
+
+    .site-header {
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      background: var(--panel);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      min-width: 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: none;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      flex: none;
+    }
+    .brand-name {
+      font-size: 1.16rem;
+      font-weight: 800;
+      letter-spacing: -.01em;
+      color: var(--brand);
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      padding: 6px 11px;
+      border-radius: 6px;
+      font-size: .9rem;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      transition: background .15s;
+    }
+    .header-nav a:hover { background: #eef1f7; color: var(--brand); }
+    .header-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: #f9fafc;
+      padding: 4px 5px 4px 12px;
+      gap: 6px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .search-box:focus-within { border-color: var(--brand-2); box-shadow: 0 0 0 3px rgba(45, 74, 122, .12); }
+    .search-box input {
+      border: 0;
+      background: transparent;
+      outline: none;
+      font-size: .85rem;
+      width: 150px;
+      color: var(--ink);
+    }
+    .search-box button {
+      border: 0;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: .8rem;
+    }
+    .search-box button:hover { background: var(--brand-2); }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: .85rem;
+      border-radius: 999px;
+      padding: 7px 15px;
+      white-space: nowrap;
+    }
+    .header-cta:hover { background: #b45309; color: #fff; }
+
+    /* 首屏 */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(1200px 340px at 85% -10%, rgba(245, 197, 66, .25), transparent 60%),
+        radial-gradient(900px 300px at 0% 100%, rgba(45, 74, 122, .35), transparent 65%),
+        linear-gradient(135deg, #1b2a4a 0%, #22365c 55%, #2d4a7a 100%);
+      color: #fff;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+      gap: 32px;
+      align-items: center;
+      padding: 38px 0 42px;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: .78rem;
+      color: #fde68a;
+      margin-bottom: 14px;
+    }
+    .hero-kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: #f5c542; }
+    .hero h1 { color: #fff; font-size: 2.3rem; margin-bottom: 12px; }
+    .hero-lead {
+      color: #dbe4f3;
+      font-size: .98rem;
+      max-width: 520px;
+      margin-bottom: 16px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: .82rem;
+      color: #b9c7e0;
+      margin-bottom: 20px;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 8px;
+      padding: 9px 18px;
+      font-weight: 600;
+      font-size: .9rem;
+      border: 1px solid transparent;
+      transition: background .15s, transform .15s;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--accent-line); color: #1b2a4a; }
+    .btn-primary:hover { background: #fbbf24; color: #1b2a4a; }
+    .btn-ghost { background: rgba(255, 255, 255, .08); color: #fff; border-color: rgba(255, 255, 255, .25); }
+    .btn-ghost:hover { background: rgba(255, 255, 255, .16); color: #fff; }
+
+    .hero-visual {
+      position: relative;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 16px;
+      padding: 18px;
+      backdrop-filter: blur(2px);
+    }
+    .hero-visual svg { width: 100%; height: auto; }
+    .visual-caption {
+      margin-top: 10px;
+      font-size: .75rem;
+      color: #aebcd6;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* 主内容三栏 */
+    .layout {
+      display: grid;
+      grid-template-columns: 176px minmax(0, 1fr) 244px;
+      gap: var(--gap);
+      align-items: start;
+      padding: 24px 0 40px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .panel-pad { padding: 18px; }
+    .side-title {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* 左栏 */
+    .left-rail { position: sticky; top: calc(var(--notice-h) + var(--header-h) + 16px); }
+    .channel-nav { padding: 14px 12px; }
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: .86rem;
+      color: var(--ink-soft);
+      margin-bottom: 2px;
+    }
+    .channel-nav a:hover { background: #eef1f7; color: var(--brand); }
+    .channel-nav a .ico {
+      width: 16px; text-align: center; font-size: .9rem; flex: none;
+      color: var(--brand-2);
+    }
+    .left-note {
+      margin-top: 14px;
+      padding: 13px 12px;
+      background: var(--accent-soft);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius);
+      font-size: .78rem;
+      color: #78350f;
+      line-height: 1.55;
+    }
+    .left-note strong { display: block; margin-bottom: 4px; color: #92400e; }
+
+    /* 中栏 */
+    .main-col { display: flex; flex-direction: column; gap: var(--gap); min-width: 0; }
+    .section { padding: 20px 22px; }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 { font-size: 1.22rem; }
+    .section-head .sub { font-size: .8rem; color: var(--ink-muted); }
+    .section-head .more-link { font-size: .82rem; color: var(--brand-2); font-weight: 600; white-space: nowrap; }
+    .section-head .more-link:hover { color: var(--accent); }
+    .divider { height: 1px; background: var(--line); margin: 4px 0 14px; }
+
+    /* 内容简介 */
+    .intro-text { color: var(--ink-soft); font-size: .95rem; }
+    .intro-text p { margin-bottom: .7em; }
+    .intro-text strong { color: var(--ink); }
+
+    /* 热门卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .content-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 13px;
+      background: #fcfdff;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+      min-width: 0;
+    }
+    .content-card:hover {
+      border-color: var(--line-strong);
+      box-shadow: 0 8px 20px rgba(26, 34, 51, .08);
+      transform: translateY(-1px);
+    }
+    .card-title {
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag {
+      display: inline-block;
+      font-size: .68rem;
+      background: #eef1f7;
+      color: #3d4d6b;
+      border-radius: 4px;
+      padding: 1px 6px;
+      white-space: nowrap;
+    }
+    .tag.accent { background: var(--accent-soft); color: #92400e; }
+    .tag.green { background: var(--green-soft); color: var(--green); }
+    .tag.blue { background: var(--blue-soft); color: #3730a3; }
+    .card-desc {
+      font-size: .78rem;
+      color: var(--ink-muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: .7rem;
+      color: var(--ink-muted);
+      border-top: 1px dashed var(--line);
+      padding-top: 7px;
+    }
+    .card-meta .hot { color: var(--accent); font-weight: 700; }
+
+    /* 最新更新紧凑列表 */
+    .compact-list { list-style: none; padding: 0; margin: 0; }
+    .compact-list li {
+      display: flex;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px dashed var(--line);
+      margin: 0;
+      align-items: baseline;
+    }
+    .compact-list li:last-child { border-bottom: 0; }
+    .compact-list .num {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      background: #eef1f7;
+      color: var(--brand-2);
+      font-size: .7rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .compact-list .num.top { background: var(--accent); color: #fff; }
+    .compact-list .item-main { min-width: 0; }
+    .compact-list .item-title {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .compact-list .item-desc {
+      font-size: .76rem;
+      color: var(--ink-muted);
+      margin-top: 1px;
+    }
+    .compact-list .item-time {
+      margin-left: auto;
+      flex: none;
+      font-size: .7rem;
+      color: var(--ink-muted);
+    }
+
+    /* 分类入口 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .cat-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 11px 12px;
+      background: #fcfdff;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      transition: border-color .15s, background .15s;
+    }
+    .cat-item:hover { border-color: var(--brand-2); background: #f7f9fd; }
+    .cat-item .cat-name { font-size: .88rem; font-weight: 700; color: var(--ink); }
+    .cat-item .cat-desc { font-size: .72rem; color: var(--ink-muted); }
+
+    /* 深度解析 */
+    .deep-body { color: var(--ink-soft); font-size: .93rem; }
+    .deep-body h3 {
+      color: var(--ink);
+      font-size: 1rem;
+      margin: 20px 0 8px;
+      padding-left: 10px;
+      border-left: 3px solid var(--accent-line);
+    }
+    .deep-body h3:first-child { margin-top: 0; }
+    .deep-body p { margin-bottom: .7em; }
+    .deep-body ul { padding-left: 1.2em; }
+    .deep-body li { margin-bottom: .4em; }
+    .deep-note {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--brand-2);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 11px 14px;
+      font-size: .84rem;
+      color: var(--ink-soft);
+      margin-top: 14px;
+    }
+
+    /* 体验指南 */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .guide-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      background: #fcfdff;
+    }
+    .guide-item .g-title {
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .guide-item .g-title .step-num {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      font-size: .7rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+    }
+    .guide-item .g-desc { font-size: .8rem; color: var(--ink-muted); }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    details.faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fcfdff;
+      overflow: hidden;
+    }
+    details.faq-item[open] { border-color: var(--line-strong); }
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 11px 14px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: "+";
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      flex: none;
+      transition: transform .2s;
+    }
+    details.faq-item[open] summary::after { content: "−"; color: var(--brand-2); }
+    details.faq-item .faq-answer {
+      padding: 0 14px 12px;
+      font-size: .84rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .comment-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      background: #fcfdff;
+      display: flex;
+      gap: 9px;
+    }
+    .avatar {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: .78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      margin-top: 1px;
+    }
+    .comment-body { min-width: 0; }
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .comment-name { font-size: .8rem; font-weight: 700; color: var(--ink); }
+    .comment-time { font-size: .68rem; color: var(--ink-muted); }
+    .comment-text { font-size: .8rem; color: var(--ink-soft); line-height: 1.55; margin-top: 2px; }
+
+    /* 相关资讯 */
+    .news-list { list-style: none; padding: 0; margin: 0; }
+    .news-list li {
+      display: flex;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px dashed var(--line);
+      margin: 0;
+    }
+    .news-list li:last-child { border-bottom: 0; }
+    .news-date {
+      flex: none;
+      width: 58px;
+      font-size: .72rem;
+      color: var(--ink-muted);
+      padding-top: 2px;
+    }
+    .news-main { min-width: 0; }
+    .news-title { font-size: .88rem; font-weight: 700; color: var(--ink); }
+    .news-desc { font-size: .78rem; color: var(--ink-muted); margin-top: 1px; }
+
+    /* 相关推荐标签 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tags a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid var(--line);
+      background: #fcfdff;
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: .8rem;
+      color: var(--ink-soft);
+      transition: border-color .15s, color .15s;
+    }
+    .rec-tags a:hover { border-color: var(--brand-2); color: var(--brand-2); }
+
+    /* 精选时间线 */
+    .timeline { list-style: none; padding: 0; margin: 0; position: relative; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px; top: 4px; bottom: 4px;
+      width: 2px;
+      background: var(--line);
+    }
+    .timeline li {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 12px;
+    }
+    .timeline li:last-child { margin-bottom: 0; }
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 2px; top: 5px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--brand-2);
+    }
+    .timeline .t-time { font-size: .72rem; color: var(--accent); font-weight: 700; }
+    .timeline .t-title { font-size: .86rem; font-weight: 700; color: var(--ink); }
+    .timeline .t-desc { font-size: .78rem; color: var(--ink-muted); }
+
+    /* 右栏 */
+    .right-rail { display: flex; flex-direction: column; gap: var(--gap); position: sticky; top: calc(var(--notice-h) + var(--header-h) + 16px); }
+    .toc { padding: 14px; }
+    .toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+    .toc li { margin-bottom: 1px; counter-increment: toc; }
+    .toc a {
+      display: flex;
+      gap: 7px;
+      padding: 5px 7px;
+      border-radius: 5px;
+      font-size: .8rem;
+      color: var(--ink-soft);
+      line-height: 1.4;
+    }
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      color: var(--ink-muted);
+      font-size: .68rem;
+      font-weight: 700;
+      flex: none;
+      padding-top: 2px;
+    }
+    .toc a:hover { background: #eef1f7; color: var(--brand); }
+    .hot-list { list-style: none; padding: 0; margin: 0; }
+    .hot-list li {
+      display: flex;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--line);
+      margin: 0;
+      font-size: .82rem;
+      align-items: baseline;
+    }
+    .hot-list li:last-child { border-bottom: 0; }
+    .hot-list .rank {
+      flex: none;
+      font-weight: 800;
+      font-size: .74rem;
+      color: var(--ink-muted);
+      width: 16px;
+    }
+    .hot-list .rank.top1 { color: var(--red); }
+    .hot-list .rank.top2 { color: var(--accent); }
+    .hot-list .rank.top3 { color: var(--green); }
+    .hot-list .hot-link { font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .hot-list .hot-link:hover { color: var(--brand-2); }
+    .hot-list .hot-tag { margin-left: auto; flex: none; font-size: .66rem; color: var(--ink-muted); }
+    .extend-box { padding: 14px; }
+    .extend-box .extend-item {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: .82rem;
+    }
+    .extend-box .extend-item:last-child { border-bottom: 0; }
+    .extend-box .extend-title { font-weight: 600; color: var(--ink); }
+    .extend-box .extend-desc { font-size: .74rem; color: var(--ink-muted); }
+
+    /* 页尾 */
+    .site-footer {
+      background: #1b2a4a;
+      color: #cbd5e1;
+      margin-top: 8px;
+      font-size: .82rem;
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 26px;
+      padding: 34px 0 24px;
+    }
+    .footer-brand .brand-name { color: #fff; font-size: 1.1rem; }
+    .footer-brand p { color: #94a3b8; font-size: .8rem; margin-top: 8px; max-width: 280px; }
+    .footer-col h4 { font-size: .82rem; color: #e2e8f0; margin-bottom: 9px; }
+    .footer-col a {
+      display: block;
+      color: #94a3b8;
+      padding: 3px 0;
+      font-size: .8rem;
+    }
+    .footer-col a:hover { color: #fde68a; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding: 14px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      color: #64748b;
+      font-size: .75rem;
+    }
+    .footer-bottom .sample-note { color: #64748b; }
+
+    /* 搜索无结果 */
+    .search-empty {
+      display: none;
+      padding: 14px;
+      background: var(--red-soft);
+      color: var(--red);
+      border-radius: var(--radius-sm);
+      font-size: .84rem;
+      margin-top: 10px;
+    }
+    .search-empty.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    /* 滚动偏移 */
+    [id] { scroll-margin-top: calc(var(--notice-h) + var(--header-h) + 18px); }
+
+    /* 平板 */
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 1fr; }
+      .left-rail { position: static; order: 2; }
+      .right-rail { position: static; order: 3; }
+      .main-col { order: 1; }
+      .channel-nav { display: flex; flex-wrap: wrap; gap: 4px; padding: 10px; }
+      .channel-nav a { margin-bottom: 0; flex: 1 1 auto; justify-content: center; }
+      .left-note { margin-top: 10px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 22px; }
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    /* 手机 */
+    @media (max-width: 720px) {
+      :root { --header-h: 56px; --gap: 14px; }
+      .wrap { padding: 0 12px; }
+      .header-inner { gap: 10px; }
+      .brand-name { font-size: 1rem; }
+      .header-nav { display: none; }
+      .search-box input { width: 92px; }
+      .header-cta { display: none; }
+      .hero h1 { font-size: 1.7rem; }
+      .hero-inner { padding: 26px 0 30px; }
+      .hero-lead { font-size: .9rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .guide-grid { grid-template-columns: 1fr; }
+      .comment-grid { grid-template-columns: 1fr; }
+      .section { padding: 16px 14px; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 18px; padding: 24px 0 16px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .toc ol { columns: 2; column-gap: 10px; }
+      .toc li { break-inside: avoid; }
+      .news-list li { flex-direction: column; gap: 2px; }
+      .news-date { width: auto; }
+      .compact-list li { flex-wrap: wrap; }
+      .compact-list .item-time { margin-left: 0; width: 100%; }
+    }
+    @media (max-width: 380px) {
+      .search-box { display: none; }
+      .hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 吸顶公告条 + 页头 -->
+  <div class="sticky-top">
+    <div class="notice" role="region" aria-label="公告">
+      <div class="wrap">
+        <span class="notice-badge">今日上新</span>
+        <span class="notice-text">秋季联赛第 8 轮赛程已更新 · <strong>今晚 19:30</strong> 三场焦点对决 · 新增「项目对比」筛选项</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/#top" aria-label="今日大赛 首页">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1b2a4a"/>
+            <path d="M16 42l11-18 8 13 6-9 9 14" stroke="#f5c542" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="48" cy="17" r="6" fill="#f5c542"/>
+            <path d="M45 17h6M48 14v6" stroke="#1b2a4a" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">今日大赛</span>
+        </a>
+        <nav class="header-nav" aria-label="主题导航">
+          <a href="/#hot">热门赛事</a>
+          <a href="/#latest">最新赛程</a>
+          <a href="/#category">项目分类</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">观赛指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#news">赛事资讯</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="search" id="siteSearch" placeholder="搜索赛事、项目…" aria-label="站内搜索">
+            <button type="button" id="searchBtn">查找</button>
+          </div>
+          <a class="header-cta" href="/#latest">查看今日赛程</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-kicker"><span class="dot"></span> 每日更新 · 赛事内容与赛程聚合</span>
+        <h1>今日大赛</h1>
+        <p class="hero-lead">汇总今日大赛的赛程看点、热门项目与深度解析，覆盖竞技赛事、团队对抗与个人项目，方便按时间、类型和关注度快速定位想看的比赛。</p>
+        <div class="hero-meta">
+          <span>◆ 今日 12 场重点赛事</span>
+          <span>◆ 覆盖 8 个项目分类</span>
+          <span>◆ 赛前看点与赛后复盘</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#hot">浏览热门赛事</a>
+          <a class="btn btn-ghost" href="/#category">按项目筛选</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 240" role="img" aria-label="赛事数据面板示意图">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f5c542" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#d97706" stop-opacity=".35"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#7dd3fc" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#7dd3fc" stop-opacity=".85"/>
+            </linearGradient>
+          </defs>
+          <rect x="1" y="1" width="418" height="238" rx="12" fill="none" stroke="rgba(255,255,255,.16)" stroke-dasharray="4 5"/>
+          <rect x="20" y="24" width="120" height="13" rx="6" fill="rgba(255,255,255,.22)"/>
+          <rect x="20" y="48" width="80" height="9" rx="4" fill="rgba(255,255,255,.12)"/>
+          <rect x="20" y="78" width="180" height="66" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/>
+          <path d="M34 126l22-26 18 14 16-22 24 30 20-14 18 18" stroke="url(#g1)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="20" y="158" width="180" height="58" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/>
+          <rect x="36" y="176" width="30" height="26" rx="3" fill="url(#g2)"/>
+          <rect x="74" y="168" width="30" height="34" rx="3" fill="url(#g2)"/>
+          <rect x="112" y="182" width="30" height="20" rx="3" fill="url(#g2)"/>
+          <rect x="150" y="172" width="30" height="30" rx="3" fill="url(#g2)"/>
+          <rect x="220" y="24" width="180" height="80" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/>
+          <circle cx="254" cy="64" r="18" fill="none" stroke="#f5c542" stroke-width="4" stroke-dasharray="72 42" stroke-linecap="round"/>
+          <text x="254" y="69" text-anchor="middle" fill="#fde68a" font-size="11" font-weight="700">68%</text>
+          <rect x="292" y="40" width="90" height="8" rx="4" fill="rgba(255,255,255,.18)"/>
+          <rect x="292" y="56" width="66" height="8" rx="4" fill="rgba(255,255,255,.12)"/>
+          <rect x="292" y="72" width="78" height="8" rx="4" fill="rgba(255,255,255,.12)"/>
+          <rect x="220" y="118" width="180" height="98" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/>
+          <rect x="236" y="134" width="50" height="9" rx="4" fill="rgba(255,255,255,.2)"/>
+          <rect x="236" y="152" width="148" height="7" rx="3.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="236" y="166" width="120" height="7" rx="3.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="236" y="180" width="136" height="7" rx="3.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="236" y="194" width="88" height="7" rx="3.5" fill="rgba(255,255,255,.12)"/>
+        </svg>
+        <div class="visual-caption"><span>赛程密度与关注趋势</span><span>示例视图</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容 -->
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 左栏：频道导航 -->
+      <aside class="left-rail" aria-label="频道与栏目索引">
+        <div class="panel channel-nav">
+          <div class="side-title">频道导航</div>
+          <a href="/#intro"><span class="ico">◈</span>内容简介</a>
+          <a href="/#hot"><span class="ico">★</span>热门赛事推荐</a>
+          <a href="/#latest"><span class="ico">⏱</span>最新赛程更新</a>
+          <a href="/#category"><span class="ico">▦</span>项目分类入口</a>
+          <a href="/#deep"><span class="ico">◆</span>深度解析</a>
+          <a href="/#guide"><span class="ico">◐</span>观赛体验指南</a>
+          <a href="/#faq"><span class="ico">?</span>常见问题</a>
+          <a href="/#comments"><span class="ico">☰</span>用户评论</a>
+          <a href="/#news"><span class="ico">▤</span>相关资讯</a>
+          <a href="/#recommend"><span class="ico">⌕</span>相关推荐</a>
+          <a href="/#timeline"><span class="ico">◷</span>今日时间线</a>
+        </div>
+        <div class="left-note">
+          <strong>今日提示</strong>
+          晚间 19:30 后进入密集赛程时段，建议先按项目分类筛选，再对照时间线安排观赛节奏。
+        </div>
+      </aside>
+
+      <!-- 中栏：主内容 -->
+      <main class="main-col">
+
+        <!-- 1. 内容简介 -->
+        <section class="panel section" id="intro">
+          <div class="section-head">
+            <h2>今日大赛：每日赛事内容聚合与观赛入口</h2>
+            <span class="sub">赛事看点 · 赛程安排 · 项目分类</span>
+          </div>
+          <div class="intro-text">
+            <p><strong>今日大赛</strong>是一个面向竞技赛事爱好者的内容聚合页面，围绕当天正在发生或即将开始的比赛，整理赛程安排、项目分类、热门对决与看点分析。页面不是简单的比分列表，而是把“今天有什么值得看”“几点开始”“不同项目怎么选”这三类问题放在同一套结构里，方便在短时间内完成信息筛选。</p>
+            <p>对于习惯在通勤、午休或晚间观看比赛的用户，今日大赛把焦点放在内容消费效率上：先通过热门赛事推荐了解高关注度场次，再进入最新赛程更新确认时间，最后用项目分类入口按兴趣收窄范围。喜欢团队对抗的可以关注联赛与杯赛板块，偏好个人项目的可以从竞技、技巧与耐力分类进入，关注赛前分析的则可以阅读深度解析中的对阵拆解。</p>
+            <p>页面内容按照赛事类型、观赛场景和选择依据三条线组织。类型线覆盖团队联赛、个人竞技、技巧挑战与综合赛事；场景线对应“午间快速浏览”“晚间连续观赛”“周末集中补看”等不同节奏；选择线则提供项目对比、赛程密度和看点强度等参考维度。每个板块都尽量给出具体赛事名称、项目标签和时间信息，减少泛泛而谈的推荐语。</p>
+            <p>如果你正在搜索“今日大赛有哪些比赛”“某个项目今天几点开始”“团队赛和个人赛怎么选”，可以从下方热门赛事推荐或分类入口直接进入对应内容。页面中的热度、评分与关注人数均为示例数据，用于展示内容组织方式，不构成真实榜单。所有赛程信息建议以赛事官方发布为准，本页仅作为浏览与筛选的辅助入口。</p>
+          </div>
+        </section>
+
+        <!-- 2. 热门内容推荐 -->
+        <section class="panel section" id="hot">
+          <div class="section-head">
+            <h2>热门赛事推荐</h2>
+            <a class="more-link" href="/#latest">查看完整赛程 →</a>
+          </div>
+          <div class="card-grid" id="hotCardGrid">
+            <article class="content-card">
+              <div class="card-title">城市篮球联赛第 8 轮：北区 vs 东港</div>
+              <div class="tag-row"><span class="tag accent">团队对抗</span><span class="tag">篮球联赛</span><span class="tag">晚间场</span></div>
+              <p class="card-desc">两队近期防守效率接近，末节轮换与篮板争抢可能决定走势，适合关注战术执行的观众。</p>
+              <div class="card-meta"><span class="hot">热度 9.2</span><span>19:30 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">羽毛球公开赛：混双半决赛两场连播</div>
+              <div class="tag-row"><span class="tag green">技巧项目</span><span class="tag">混双</span><span class="tag">半决赛</span></div>
+              <p class="card-desc">网前争夺和发接发变化是主要看点，适合想了解双打配合节奏的观众按场次追踪。</p>
+              <div class="card-meta"><span class="hot">热度 8.7</span><span>20:10 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">城市路跑挑战赛：10 公里竞速组</div>
+              <div class="tag-row"><span class="tag blue">耐力项目</span><span class="tag">路跑</span><span class="tag">竞速组</span></div>
+              <p class="card-desc">路线包含两段缓坡，配速分配与后半程耐力是观察重点，适合跑步爱好者参考。</p>
+              <div class="card-meta"><span class="hot">热度 8.1</span><span>07:00 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">高校电竞邀请赛：团队策略组八强赛</div>
+              <div class="tag-row"><span class="tag accent">团队策略</span><span class="tag">电竞</span><span class="tag">八强</span></div>
+              <p class="card-desc">地图选择与中期资源交换值得关注，适合想看团队决策与临场调整的观众。</p>
+              <div class="card-meta"><span class="hot">热度 8.9</span><span>18:00 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">游泳达标赛：200 米自由泳分组决赛</div>
+              <div class="tag-row"><span class="tag green">个人竞速</span><span class="tag">游泳</span><span class="tag">分组决赛</span></div>
+              <p class="card-desc">出发反应与转身技术是差距来源，适合关注个人项目节奏控制的观众。</p>
+              <div class="card-meta"><span class="hot">热度 7.8</span><span>15:30 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">乒乓球团体赛：俱乐部组第三轮</div>
+              <div class="tag-row"><span class="tag accent">团队对抗</span><span class="tag">乒乓球</span><span class="tag">俱乐部组</span></div>
+              <p class="card-desc">排阵顺序与双打搭配会影响整体走向，适合想了解团体赛排兵布阵的观众。</p>
+              <div class="card-meta"><span class="hot">热度 8.4</span><span>16:00 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">室内攀岩难度赛：公开组预赛</div>
+              <div class="tag-row"><span class="tag green">技巧挑战</span><span class="tag">攀岩</span><span class="tag">预赛</span></div>
+              <p class="card-desc">线路解读与体力分配是核心，适合对技巧类项目感兴趣、想了解规则细节的观众。</p>
+              <div class="card-meta"><span class="hot">热度 7.5</span><span>14:00 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">城市足球杯：四分之一决赛第二场</div>
+              <div class="tag-row"><span class="tag accent">团队对抗</span><span class="tag">足球</span><span class="tag">淘汰赛</span></div>
+              <p class="card-desc">淘汰赛节奏更直接，定位球与边路推进是值得留意的两个环节。</p>
+              <div class="card-meta"><span class="hot">热度 9.0</span><span>21:00 开赛</span></div>
+            </article>
+            <article class="content-card">
+              <div class="card-title">围棋快棋赛：公开组 16 强</div>
+              <div class="tag-row"><span class="tag blue">策略博弈</span><span class="tag">围棋</span><span class="tag">快棋</span></div>
+              <p class="card-desc">保留时间短，中盘攻防与读秒决策更容易出现变化，适合喜欢策略类项目的观众。</p>
+              <div class="card-meta"><span class="hot">热度 7.9</span><span>13:00 开赛</span></div>
+            </article>
+          </div>
+          <div class="search-empty" id="searchEmpty">没有找到匹配的赛事内容，请尝试更短的关键词，例如“篮球”“游泳”或“晚间”。</div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section class="panel section" id="latest">
+          <div class="section-head">
+            <h2>最新赛程更新</h2>
+            <span class="sub">按开赛时间整理</span>
+          </div>
+          <ul class="compact-list">
+            <li><span class="num top">1</span><div class="item-main"><div class="item-title">城市篮球联赛第 8 轮：北区 vs 东港</div><div class="item-desc">赛前名单已确认，双方主力轮换预计维持上一轮配置。</div></div><span class="item-time">19:30</span></li>
+            <li><span class="num top">2</span><div class="item-main"><div class="item-title">城市足球杯四分之一决赛第二场</div><div class="item-desc">场地状态良好，首发名单预计开赛前一小时公布。</div></div><span class="item-time">21:00</span></li>
+            <li><span class="num">3</span><div class="item-main"><div class="item-title">羽毛球公开赛混双半决赛</div><div class="item-desc">两场连播，第一场结束后约 25 分钟进行第二场。</div></div><span class="item-time">20:10</span></li>
+            <li><span class="num">4</span><div class="item-main"><div class="item-title">高校电竞邀请赛团队策略组八强赛</div><div class="item-desc">地图池已公布，三局两胜制，赛前有简短设备调试时间。</div></div><span class="item-time">18:00</span></li>
+            <li><span class="num">5</span><div class="item-main"><div class="item-title">乒乓球团体赛俱乐部组第三轮</div><div class="item-desc">出场顺序已提交，双打场次安排在第二盘。</div></div><span class="item-time">16:00</span></li>
+            <li><span class="num">6</span><div class="item-main"><div class="item-title">游泳达标赛 200 米自由泳分组决赛</div><div class="item-desc">分组名单已更新，预计按成绩段依次进行。</div></div><span class="item-time">15:30</span></li>
+            <li><span class="num">7</span><div class="item-main"><div class="item-title">室内攀岩难度赛公开组预赛</div><div class="item-desc">线路数量与关门时间已确认，预赛取前八名进入决赛。</div></div><span class="item-time">14:00</span></li>
+            <li><span class="num">8</span><div class="item-main"><div class="item-title">围棋快棋赛公开组 16 强</div><div class="item-desc">用时规则为每方 30 分钟保留时间，读秒 30 秒三次。</div></div><span class="item-time">13:00</span></li>
+            <li><span class="num">9</span><div class="item-main"><div class="item-title">城市路跑挑战赛 10 公里竞速组</div><div class="item-desc">起点分区与补给站位置已在赛事指南中说明。</div></div><span class="item-time">07:00</span></li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="panel section" id="category">
+          <div class="section-head">
+            <h2>项目分类入口</h2>
+            <span class="sub">按赛事类型定位内容</span>
+          </div>
+          <div class="cat-grid">
+            <a class="cat-item" href="/#latest"><span class="cat-name">团队球类联赛</span><span class="cat-desc">篮球、足球等团队项目</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">个人竞速项目</span><span class="cat-desc">游泳、路跑等计时项目</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">技巧挑战项目</span><span class="cat-desc">攀岩、体操等技巧类</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">策略博弈项目</span><span class="cat-desc">围棋、棋牌等策略类</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">团队策略电竞</span><span class="cat-desc">团队配合与资源调度</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">小球对抗项目</span><span class="cat-desc">乒乓球、羽毛球等</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">晚间黄金场次</span><span class="cat-desc">19:00 后开赛的重点场</span></a>
+            <a class="cat-item" href="/#latest"><span class="cat-name">周末集中观赛</span><span class="cat-desc">多场连播与连续赛程</span></a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析正文 -->
+        <section class="panel section" id="deep">
+          <div class="section-head">
+            <h2>深度解析：今日大赛的赛程结构与项目选择逻辑</h2>
+            <span class="sub">赛前看点 · 项目差异 · 观赛节奏</span>
+          </div>
+          <div class="deep-body">
+            <h3>赛程密度决定观赛节奏</h3>
+            <p>今日大赛的赛程分布在早间、下午与晚间三个时段，密度并不平均。早间以路跑和部分预赛为主，下午进入分组决赛与技巧类预赛，晚间则是团队球类和电竞八强赛集中的时段。如果希望连续观看，晚间 19:30 之后更容易形成完整观赛块；如果只想快速了解当天结果，下午 15:00 前后是信息更新较集中的时间点。</p>
+            <p>选择场次时可以先看开赛时间是否连续，再看项目之间是否存在规则理解成本。同一时段内混合观看团队对抗与个人竞速，往往需要频繁切换注意力；而把团队球类放在同一晚连续观看，理解成本更低，也更容易跟踪对阵走势。</p>
+
+            <h3>团队项目与个人项目的差异</h3>
+            <p>团队项目的主要看点在于配合、轮换与临场调整，个人项目更强调节奏控制、技术细节与稳定输出。今日大赛中，篮球、足球、乒乓球团体赛与团队策略电竞属于团队项目，游泳、路跑、攀岩与围棋则更接近个人项目。两类项目的观看方式不同：团队项目适合整场跟进，个人项目适合按分组或按轮次挑选重点场次。</p>
+            <ul>
+              <li><strong>团队对抗：</strong>关注首发名单、轮换深度与关键时段的战术变化。</li>
+              <li><strong>个人竞速：</strong>关注分组位置、出发反应与后半程配速分配。</li>
+              <li><strong>技巧挑战：</strong>关注线路解读、动作完成度与体力分配。</li>
+              <li><strong>策略博弈：</strong>关注开局选择、中盘转换与时间压力下的决策。</li>
+            </ul>
+
+            <h3>热门项目对比：先看什么，后看什么</h3>
+            <p>如果时间有限，建议优先选择关注度较高、赛程完整度较好的场次。篮球联赛与足球杯淘汰赛通常有较完整的前后场信息，适合边看边对照赛前分析；羽毛球与乒乓球场次时间相对集中，适合在晚间作为补充观看；电竞八强赛节奏紧凑，适合对团队策略感兴趣的观众。</p>
+            <p>对于想在多个项目之间做选择的观众，可以按“规则熟悉度—时间完整度—信息密度”三个维度比较。规则熟悉度高的项目更容易快速进入状态；时间完整度高的场次更适合连续观看；信息密度高的场次通常有更多赛前分析和实时数据可参考。今日大赛在热门赛事推荐与深度解析中尽量提供这些维度的具体描述，而不是只给出笼统推荐。</p>
+
+            <h3>如何判断一场比赛是否值得跟进</h3>
+            <p>判断标准可以落在三个具体问题上：两队或两名选手近期状态是否接近、赛制是否容易产生变化、赛前信息是否足够支撑理解。状态接近的比赛往往在末段更有悬念；淘汰赛和分组决赛比循环赛更容易出现策略调整；赛前名单、线路、地图或分组信息越清楚，观看时的理解成本越低。</p>
+            <p>今日大赛在赛程更新中标注开赛时间与简要状态，在热门推荐中给出项目标签与一句话看点，目的就是让这些判断步骤更直接。对于不熟悉的项目，可以先阅读深度解析中的规则拆解，再回到赛程列表选择具体场次。</p>
+
+            <div class="deep-note">提示：赛程时间与对阵信息可能临时调整，建议在开赛前再次核对官方发布的最新安排。本页内容侧重浏览与筛选，不替代赛事官方信息。</div>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="panel section" id="guide">
+          <div class="section-head">
+            <h2>观赛体验指南</h2>
+            <span class="sub">从筛选到跟进的四个步骤</span>
+          </div>
+          <div class="guide-grid">
+            <div class="guide-item">
+              <div class="g-title"><span class="step-num">1</span>先按项目分类收窄范围</div>
+              <div class="g-desc">在项目分类入口中选择团队球类、个人竞速、技巧挑战或策略博弈，快速排除不关注的项目。</div>
+            </div>
+            <div class="guide-item">
+              <div class="g-title"><span class="step-num">2</span>用赛程时间安排观赛块</div>
+              <div class="g-desc">最新赛程更新按时间排列，优先关注连续场次，减少等待空档，适合晚间集中观看。</div>
+            </div>
+            <div class="guide-item">
+              <div class="g-title"><span class="step-num">3</span>查看热门推荐补充看点</div>
+              <div class="g-desc">热门赛事推荐为每场给出简短看点，帮助判断是否值得跟进，避免只看项目名称做选择。</div>
+            </div>
+            <div class="guide-item">
+              <div class="g-title"><span class="step-num">4</span>用深度解析理解规则差异</div>
+              <div class="g-desc">对不熟悉的项目，先阅读赛制、节奏与对比逻辑，再回到具体场次观看，理解成本更低。</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="panel section" id="faq">
+          <div class="section-head">
+            <h2>常见问题</h2>
+            <span class="sub">赛事选择与观赛安排</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>今日大赛适合什么类型的观众？</summary>
+              <div class="faq-answer">适合希望快速了解当天赛事安排、在多个项目之间做选择、或需要赛前看点参考的观众。页面按时间、项目类型和关注度组织内容，对不熟悉具体项目规则的用户也提供了深度解析作为补充。</div>
+            </details>
+            <details class="faq-item">
+              <summary>团队项目和个人项目应该怎么选？</summary>
+              <div class="faq-answer">如果喜欢连续跟进、观察配合与轮换，团队项目更合适；如果更关注个人节奏、技术细节和成绩对比，个人项目更直接。今日大赛的分类入口把两类项目分开，方便按偏好进入。</div>
+            </details>
+            <details class="faq-item">
+              <summary>赛程一般提前多久更新？</summary>
+              <div class="faq-answer">页面中的赛程更新按当天时间线整理，开赛信息通常在赛前数小时至前一天更新。遇到淘汰赛或临时调整，建议在开赛前再次核对官方发布的具体时间。</div>
+            </details>
+            <details class="faq-item">
+              <summary>晚间场次通常集中在几点？</summary>
+              <div class="faq-answer">今日大赛的晚间重点场次多集中在 18:00 至 21:00 之间，其中 19:30 前后是团队球类开赛较密集的时段。如果只想看一场，可以优先选择热门推荐中标注晚间场的比赛。</div>
+            </details>
+            <details class="faq-item">
+              <summary>热门赛事推荐和最新赛程有什么区别？</summary>
+              <div class="faq-answer">热门赛事推荐侧重单场看点与项目标签，帮助判断是否值得观看；最新赛程按时间列出当天场次，侧重开赛时间与状态说明。两者配合使用，可以先筛选再安排时间。</div>
+            </details>
+            <details class="faq-item">
+              <summary>页面里的热度和评分是真实数据吗？</summary>
+              <div class="faq-answer">页面中的热度、评分与关注人数为示例数据，用于展示内容组织方式和信息层级，不构成真实榜单或官方评价。实际观赛选择建议结合赛程、项目偏好和官方信息综合判断。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="panel section" id="comments">
+          <div class="section-head">
+            <h2>用户评论</h2>
+            <span class="sub">示例讨论 · 观点多样</span>
+          </div>
+          <div class="comment-grid">
+            <div class="comment-item"><div class="avatar">临</div><div class="comment-body"><div class="comment-head"><span class="comment-name">临场观察员</span><span class="comment-time">今天 12:10</span></div><div class="comment-text">篮球那场放在晚间很合适，正好下班后能完整看完，希望赛前名单早点出。</div></div></div>
+            <div class="comment-item"><div class="avatar">跑</div><div class="comment-body"><div class="comment-head"><span class="comment-name">跑步的小林</span><span class="comment-time">今天 11:42</span></div><div class="comment-text">路跑 10 公里路线有两段坡，配速分配确实关键，准备按这个思路看后半程。</div></div></div>
+            <div class="comment-item"><div class="avatar">羽</div><div class="comment-body"><div class="comment-head"><span class="comment-name">羽球看台</span><span class="comment-time">今天 11:25</span></div><div class="comment-text">混双半决赛两场连播很友好，中间间隔不长，适合一次看完。</div></div></div>
+            <div class="comment-item"><div class="avatar">电</div><div class="comment-body"><div class="comment-head"><span class="comment-name">电竞慢半拍</span><span class="comment-time">今天 10:58</span></div><div class="comment-text">八强赛地图池公布后看点清楚很多，团队决策比单纯操作更值得看。</div></div></div>
+            <div class="comment-item"><div class="avatar">乒</div><div class="comment-body"><div class="comment-head"><span class="comment-name">乒乓笔记</span><span class="comment-time">今天 10:36</span></div><div class="comment-text">团体赛排阵影响挺大，第二盘双打如果先丢，后面压力会明显增加。</div></div></div>
+            <div class="comment-item"><div class="avatar">岩</div><div class="comment-body"><div class="comment-head"><span class="comment-name">岩壁下方</span><span class="comment-time">今天 10:12</span></div><div class="comment-text">攀岩预赛线路看起来不简单，关门时间前可能就有不少选手用完尝试次数。</div></div></div>
+            <div class="comment-item"><div class="avatar">棋</div><div class="comment-body"><div class="comment-head"><span class="comment-name">棋盘边角</span><span class="comment-time">今天 09:50</span></div><div class="comment-text">快棋赛读秒阶段变化最多，中盘转换如果拖到后面，时间压力会很明显。</div></div></div>
+            <div class="comment-item"><div class="avatar">足</div><div class="comment-body"><div class="comment-head"><span class="comment-name">边路直上</span><span class="comment-time">今天 09:34</span></div><div class="comment-text">足球淘汰赛更看重定位球，四分之一决赛这种阶段，一个角球就可能改变走势。</div></div></div>
+            <div class="comment-item"><div class="avatar">游</div><div class="comment-body"><div class="comment-head"><span class="comment-name">泳道中线</span><span class="comment-time">今天 09:18</span></div><div class="comment-text">200 米自由泳分组决赛，转身技术差距比出发更明显，下午可以重点看这一段。</div></div></div>
+            <div class="comment-item"><div class="avatar">赛</div><div class="comment-body"><div class="comment-head"><span class="comment-name">赛程整理员</span><span class="comment-time">今天 08:55</span></div><div class="comment-text">时间线做得清楚，但希望后续能把场地信息也补上，方便判断是否值得去现场。</div></div></div>
+            <div class="comment-item"><div class="avatar">观</div><div class="comment-body"><div class="comment-head"><span class="comment-name">观赛新手</span><span class="comment-time">今天 08:30</span></div><div class="comment-text">对围棋规则不太熟，深度解析里关于保留时间和读秒的说明挺有帮助。</div></div></div>
+            <div class="comment-item"><div class="avatar">晚</div><div class="comment-body"><div class="comment-head"><span class="comment-name">晚间档常客</span><span class="comment-time">今天 08:12</span></div><div class="comment-text">19:30 之后连续三场确实紧凑，准备先看篮球，再转到足球杯。</div></div></div>
+            <div class="comment-item"><div class="avatar">数</div><div class="comment-body"><div class="comment-head"><span class="comment-name">数据派看台</span><span class="comment-time">今天 07:58</span></div><div class="comment-text">热度评分只能做参考，还是得看对阵和赛制，淘汰赛通常比循环赛更有悬念。</div></div></div>
+            <div class="comment-item"><div class="avatar">周</div><div class="comment-body"><div class="comment-head"><span class="comment-name">周末补看党</span><span class="comment-time">今天 07:40</span></div><div class="comment-text">分类入口如果能直接跳到对应场次列表就更好了，现在还需要再往下找。</div></div></div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="panel section" id="news">
+          <div class="section-head">
+            <h2>相关资讯</h2>
+            <span class="sub">赛程动态与项目观察</span>
+          </div>
+          <ul class="news-list">
+            <li><span class="news-date">04-18</span><div class="news-main"><div class="news-title">城市篮球联赛第 8 轮赛程确认，晚间两场连续开赛</div><div class="news-desc">本轮比赛集中在晚间时段，北区与东港的对阵安排在第一场，第二场随后进行。</div></div></li>
+            <li><span class="news-date">04-18</span><div class="news-main"><div class="news-title">羽毛球公开赛混双半决赛对阵出炉</div><div class="news-desc">两对组合近期交手记录接近，网前争夺可能成为决定走向的关键环节。</div></div></li>
+            <li><span class="news-date">04-17</span><div class="news-main"><div class="news-title">路跑挑战赛发布 10 公里路线说明</div><div class="news-desc">路线包含两段缓坡，组委会提醒参赛者合理分配前半程配速。</div></div></li>
+            <li><span class="news-date">04-17</span><div class="news-main"><div class="news-title">高校电竞邀请赛公布八强赛地图池</div><div class="news-desc">地图组合更偏向中期资源交换，团队策略组的对抗节奏预计加快。</div></div></li>
+            <li><span class="news-date">04-16</span><div class="news-main"><div class="news-title">游泳达标赛分组名单更新，下午进行决赛</div><div class="news-desc">200 米自由泳分组按成绩段排列，预计下午 15:30 后进入决赛阶段。</div></div></li>
+            <li><span class="news-date">04-16</span><div class="news-main"><div class="news-title">围棋快棋赛公开组 16 强对阵确定</div><div class="news-desc">快棋用时规则保持不变，读秒阶段的决策质量仍是主要看点。</div></div></li>
+          </ul>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="panel section" id="recommend">
+          <div class="section-head">
+            <h2>相关推荐</h2>
+            <span class="sub">按具体方向继续浏览</span>
+          </div>
+          <div class="rec-tags">
+            <a href="/#latest">篮球联赛赛程</a>
+            <a href="/#latest">足球杯淘汰赛对阵</a>
+            <a href="/#latest">羽毛球混双半决赛</a>
+            <a href="/#latest">游泳分组决赛时间</a>
+            <a href="/#latest">电竞八强赛地图</a>
+            <a href="/#latest">攀岩难度赛线路</a>
+            <a href="/#latest">围棋快棋读秒规则</a>
+            <a href="/#latest">10 公里路跑配速</a>
+          </div>
+        </section>
+
+        <!-- 11. 今日时间线 -->
+        <section class="panel section" id="timeline">
+          <div class="section-head">
+            <h2>今日时间线</h2>
+            <span class="sub">按时间顺序浏览重点场次</span>
+          </div>
+          <ul class="timeline">
+            <li><div class="t-time">07:00</div><div class="t-title">城市路跑挑战赛 10 公里竞速组</div><div class="t-desc">早间开跑，路线包含两段缓坡，适合关注配速分配。</div></li>
+            <li><div class="t-time">13:00</div><div class="t-title">围棋快棋赛公开组 16 强</div><div class="t-desc">保留时间较短，中盘与读秒阶段更容易出现变化。</div></li>
+            <li><div class="t-time">14:00</div><div class="t-title">室内攀岩难度赛公开组预赛</div><div class="t-desc">线路解读与体力分配是主要看点，预赛取前八名。</div></li>
+            <li><div class="t-time">15:30</div><div class="t-title">游泳达标赛 200 米自由泳分组决赛</div><div class="t-desc">出发反应与转身技术值得留意，按成绩段依次进行。</div></li>
+            <li><div class="t-time">16:00</div><div class="t-title">乒乓球团体赛俱乐部组第三轮</div><div class="t-desc">排阵顺序与双打搭配影响整体走向。</div></li>
+            <li><div class="t-time">18:00</div><div class="t-title">高校电竞邀请赛团队策略组八强赛</div><div class="t-desc">地图选择与中期资源交换是观察重点。</div></li>
+            <li><div class="t-time">19:30</div><div class="t-title">城市篮球联赛第 8 轮：北区 vs 东港</div><div class="t-desc">防守效率接近，末节轮换与篮板争抢可能决定走势。</div></li>
+            <li><div class="t-time">20:10</div><div class="t-title">羽毛球公开赛混双半决赛</div><div class="t-desc">两场连播，网前争夺和发接发变化值得关注。</div></li>
+            <li><div class="t-time">21:00</div><div class="t-title">城市足球杯四分之一决赛第二场</div><div class="t-desc">淘汰赛节奏更直接，定位球与边路推进是重要环节。</div></li>
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- 右栏 -->
+      <aside class="right-rail" aria-label="辅助阅读">
+        <div class="panel toc">
+          <div class="side-title">本页目录</div>
+          <ol>
+            <li><a href="/#intro">内容简介</a></li>
+            <li><a href="/#hot">热门赛事推荐</a></li>
+            <li><a href="/#latest">最新赛程更新</a></li>
+            <li><a href="/#category">项目分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">观赛体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#timeline">今日时间线</a></li>
+          </ol>
+        </div>
+
+        <div class="panel panel-pad">
+          <div class="side-title">热门条目</div>
+          <ul class="hot-list">
+            <li><span class="rank top1">01</span><a class="hot-link" href="/#latest">城市篮球联赛第 8 轮</a><span class="hot-tag">19:30</span></li>
+            <li><span class="rank top2">02</span><a class="hot-link" href="/#latest">足球杯四分之一决赛</a><span class="hot-tag">21:00</span></li>
+            <li><span class="rank top3">03</span><a class="hot-link" href="/#latest">羽毛球混双半决赛</a><span class="hot-tag">20:10</span></li>
+            <li><span class="rank">04</span><a class="hot-link" href="/#latest">电竞团队策略八强赛</a><span class="hot-tag">18:00</span></li>
+            <li><span class="rank">05</span><a class="hot-link" href="/#latest">乒乓球团体赛第三轮</a><span class="hot-tag">16:00</span></li>
+          </ul>
+        </div>
+
+        <div class="panel extend-box">
+          <div class="side-title">延伸阅读</div>
+          <a class="extend-item" href="/#deep"><span class="extend-title">团队项目与个人项目怎么选</span><span class="extend-desc">从节奏、规则与信息密度比较</span></a>
+          <a class="extend-item" href="/#deep"><span class="extend-title">淘汰赛与循环赛的看点差异</span><span class="extend-desc">赛制如何影响临场策略</span></a>
+          <a class="extend-item" href="/#guide"><span class="extend-title">晚间连续观赛如何安排时间</span><span class="extend-desc">按时间线减少等待空档</span></a>
+          <a class="extend-item" href="/#faq"><span class="extend-title">热门推荐与赛程列表的配合方式</span><span class="extend-desc">先筛选再安排观看顺序</span></a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="/#top" style="gap:8px">
+            <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="#2d4a7a"/>
+              <path d="M16 42l11-18 8 13 6-9 9 14" stroke="#f5c542" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="48" cy="17" r="6" fill="#f5c542"/>
+            </svg>
+            <span class="brand-name">今日大赛</span>
+          </a>
+          <p>聚合每日赛事看点、赛程安排与项目分类，帮助竞技赛事观众快速定位值得关注的场次与内容方向。</p>
+        </div>
+        <div class="footer-col">
+          <h4>赛事浏览</h4>
+          <a href="/#hot">热门赛事推荐</a>
+          <a href="/#latest">最新赛程更新</a>
+          <a href="/#category">项目分类入口</a>
+          <a href="/#timeline">今日时间线</a>
+        </div>
+        <div class="footer-col">
+          <h4>内容与参考</h4>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">观赛体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#news">相关资讯</a>
+        </div>
+        <div class="footer-col">
+          <h4>讨论与发现</h4>
+          <a href="/#comments">用户评论</a>
+          <a href="/#recommend">相关推荐</a>
+          <a href="/#intro">内容简介</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 今日大赛 · 赛事内容聚合展示</span>
+        <span class="sample-note">部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var searchInput = document.getElementById('siteSearch');
+      var searchBtn = document.getElementById('searchBtn');
+      var emptyTip = document.getElementById('searchEmpty');
+      var hotGrid = document.getElementById('hotCardGrid');
+
+      function normalize(str) {
+        return (str || '').toLowerCase().replace(/\s+/g, '');
+      }
+
+      function runSearch() {
+        if (!hotGrid || !emptyTip) return;
+        var keyword = normalize(searchInput ? searchInput.value : '');
+        var cards = hotGrid.querySelectorAll('.content-card');
+        var visibleCount = 0;
+
+        cards.forEach(function (card) {
+          var text = normalize(card.textContent + ' ' + (card.getAttribute('data-keywords') || ''));
+          if (!keyword || text.indexOf(keyword) !== -1) {
+            card.classList.remove('is-hidden');
+            visibleCount += 1;
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+
+        if (visibleCount === 0) {
+          emptyTip.classList.add('show');
+        } else {
+          emptyTip.classList.remove('show');
+        }
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', runSearch);
+      }
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            runSearch();
+          }
+        });
+        searchInput.addEventListener('input', function () {
+          if (!searchInput.value.trim()) {
+            runSearch();
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+          </html>
